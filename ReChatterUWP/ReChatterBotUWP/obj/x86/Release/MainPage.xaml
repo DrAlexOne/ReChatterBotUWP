@@ -1,0 +1,33 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="ReChatterBotUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReChatterBotUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <TextBlock x:ConnectionId='2' x:Name="AppTitle"
+            xmlns:appmodel="using:Windows.ApplicationModel"
+                                                                
+            Style="{StaticResource CaptionTextBlockStyle}"
+            IsHitTestVisible="False"
+            Canvas.ZIndex="1"/>
+        <NavigationView x:ConnectionId='3' x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsPaneToggleButtonVisible="False" Canvas.ZIndex="0" OpenPaneLength="280" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560">
+            <NavigationView.MenuItems>
+                <NavigationViewItem x:ConnectionId='4' Icon="Send" Content="Send message" Tag="send"                   Margin="0,25,0,0"/>
+                <NavigationViewItem x:ConnectionId='5' Icon="Mail" Content="Received messages"                      />
+                <NavigationViewItem Icon="Comment" Content="Comment"/>
+                <NavigationViewItem Content="Info">
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="&#xE946;"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Icon="Setting" Content="Settings"/>
+            </NavigationView.MenuItems>
+            <Frame x:ConnectionId='6' x:Name="ContentFrame" Margin="0,-60,0,0"/>
+        </NavigationView>
+    </Grid>
+</Page>
+

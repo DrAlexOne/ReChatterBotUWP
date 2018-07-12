@@ -1,0 +1,2 @@
+MainPackage=D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.1.0.0_ARM.appx
+SymbolPackage=D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\AppPackages\ReChatterBotUWP_0.1.0.0_Test\ReChatterBotUWP_0.1.0.0_ARM.appxsym
