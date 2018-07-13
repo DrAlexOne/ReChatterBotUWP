@@ -189,19 +189,25 @@ namespace ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
-            _typeNameTable[0] = "ReChatterBotUWP.MainPage";
+            _typeNameTable = new string[8];
+            _typeNameTable[0] = "ReChatterBotUWP.Comment";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "ReChatterBotUWP.Received";
-            _typeNameTable[4] = "ReChatterBotUWP.Send";
+            _typeNameTable[3] = "ReChatterBotUWP.Info";
+            _typeNameTable[4] = "ReChatterBotUWP.MainPage";
+            _typeNameTable[5] = "ReChatterBotUWP.Received";
+            _typeNameTable[6] = "ReChatterBotUWP.Send";
+            _typeNameTable[7] = "ReChatterBotUWP.Settings";
 
-            _typeTable = new global::System.Type[5];
-            _typeTable[0] = typeof(global::ReChatterBotUWP.MainPage);
+            _typeTable = new global::System.Type[8];
+            _typeTable[0] = typeof(global::ReChatterBotUWP.Comment);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::ReChatterBotUWP.Received);
-            _typeTable[4] = typeof(global::ReChatterBotUWP.Send);
+            _typeTable[3] = typeof(global::ReChatterBotUWP.Info);
+            _typeTable[4] = typeof(global::ReChatterBotUWP.MainPage);
+            _typeTable[5] = typeof(global::ReChatterBotUWP.Received);
+            _typeTable[6] = typeof(global::ReChatterBotUWP.Send);
+            _typeTable[7] = typeof(global::ReChatterBotUWP.Settings);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -236,9 +242,12 @@ namespace ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::ReChatterBotUWP.MainPage(); }
-        private object Activate_3_Received() { return new global::ReChatterBotUWP.Received(); }
-        private object Activate_4_Send() { return new global::ReChatterBotUWP.Send(); }
+        private object Activate_0_Comment() { return new global::ReChatterBotUWP.Comment(); }
+        private object Activate_3_Info() { return new global::ReChatterBotUWP.Info(); }
+        private object Activate_4_MainPage() { return new global::ReChatterBotUWP.MainPage(); }
+        private object Activate_5_Received() { return new global::ReChatterBotUWP.Received(); }
+        private object Activate_6_Send() { return new global::ReChatterBotUWP.Send(); }
+        private object Activate_7_Settings() { return new global::ReChatterBotUWP.Settings(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -250,9 +259,9 @@ namespace ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  ReChatterBotUWP.MainPage
+            case 0:   //  ReChatterBotUWP.Comment
                 userType = new global::ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_Comment;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -265,16 +274,37 @@ namespace ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo
                 xamlType = new global::ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  ReChatterBotUWP.Received
+            case 3:   //  ReChatterBotUWP.Info
                 userType = new global::ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_Received;
+                userType.Activator = Activate_3_Info;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  ReChatterBotUWP.Send
+            case 4:   //  ReChatterBotUWP.MainPage
                 userType = new global::ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_Send;
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  ReChatterBotUWP.Received
+                userType = new global::ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_Received;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  ReChatterBotUWP.Send
+                userType = new global::ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Send;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  ReChatterBotUWP.Settings
+                userType = new global::ReChatterBotUWP.ReChatterBotUWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_Settings;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

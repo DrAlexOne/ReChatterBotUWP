@@ -14,19 +14,19 @@
             Style="{StaticResource CaptionTextBlockStyle}"
             IsHitTestVisible="False"
             Canvas.ZIndex="1"/>
-        <NavigationView x:ConnectionId='3' x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsPaneToggleButtonVisible="False" Canvas.ZIndex="0" OpenPaneLength="280" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560">
+        <NavigationView x:ConnectionId='3' x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" Canvas.ZIndex="0" OpenPaneLength="225" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560" IsPaneToggleButtonVisible="False">
             <NavigationView.MenuItems>
                 <NavigationViewItem x:ConnectionId='4' Icon="Send" Content="Send message" Tag="send"                   Margin="0,25,0,0"/>
                 <NavigationViewItem x:ConnectionId='5' Icon="Mail" Content="Received messages"                      />
-                <NavigationViewItem Icon="Comment" Content="Comment"/>
-                <NavigationViewItem Content="Info">
+                <NavigationViewItem x:ConnectionId='6' Icon="Comment" Content="Comment"                     />
+                <NavigationViewItem x:ConnectionId='7' Content="Info"                  >
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE946;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Icon="Setting" Content="Settings"/>
+                <NavigationViewItem x:ConnectionId='8' Icon="Setting" Content="Settings"                      />
             </NavigationView.MenuItems>
-            <Frame x:ConnectionId='6' x:Name="ContentFrame" Margin="0,-60,0,0"/>
+            <Frame x:ConnectionId='9' x:Name="ContentFrame" Margin="0,-60,0,0"/>
         </NavigationView>
     </Grid>
 </Page>

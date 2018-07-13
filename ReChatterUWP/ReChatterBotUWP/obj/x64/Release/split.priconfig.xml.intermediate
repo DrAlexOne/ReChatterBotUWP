@@ -6,7 +6,7 @@
     <autoResourcePackage qualifier="DXFeatureLevel" />
     <omitSchemaFromResourcePacks />
   </packaging>
-  <index root="\" startIndexAt="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\resources.pri">
+  <index root="\" startIndexAt="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\resources.pri">
     <default>
       <qualifier name="Language" value="ru-RU" />
       <qualifier name="Contrast" value="standard" />

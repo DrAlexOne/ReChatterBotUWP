@@ -8,7 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        
-    </Grid>
+    <StackPanel Margin="10,10,0,0">
+        <StackPanel Orientation="Horizontal">
+            <FontIcon Glyph="&#xE724;" Margin="25,25,0,0" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock HorizontalAlignment="Left" Margin="15,18,0,0" Text="Send message" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
+        </StackPanel>
+        <StackPanel Margin="25,30,0,0">
+
+        </StackPanel>
+    </StackPanel>
+
 </Page>

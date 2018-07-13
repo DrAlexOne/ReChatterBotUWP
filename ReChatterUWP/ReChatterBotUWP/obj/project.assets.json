@@ -17732,11 +17732,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Alex\\Visual\\ReChatterBot\\ReChatterBotUWP\\ReChatterBotUWP.csproj",
+      "projectUniqueName": "D:\\Alex\\Visual\\ReChatterUWP\\ReChatterBotUWP\\ReChatterBotUWP.csproj",
       "projectName": "ReChatterBotUWP",
-      "projectPath": "D:\\Alex\\Visual\\ReChatterBot\\ReChatterBotUWP\\ReChatterBotUWP.csproj",
+      "projectPath": "D:\\Alex\\Visual\\ReChatterUWP\\ReChatterBotUWP\\ReChatterBotUWP.csproj",
       "packagesPath": "C:\\Users\\coole\\.nuget\\packages\\",
-      "outputPath": "D:\\Alex\\Visual\\ReChatterBot\\ReChatterBotUWP\\obj\\",
+      "outputPath": "D:\\Alex\\Visual\\ReChatterUWP\\ReChatterBotUWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

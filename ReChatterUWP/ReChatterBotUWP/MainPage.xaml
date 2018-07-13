@@ -14,17 +14,17 @@
             Style="{StaticResource CaptionTextBlockStyle}"
             IsHitTestVisible="False"
             Canvas.ZIndex="1"/>
-        <NavigationView x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" IsPaneToggleButtonVisible="False" Canvas.ZIndex="0" OpenPaneLength="280" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560">
+        <NavigationView x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" Canvas.ZIndex="0" OpenPaneLength="225" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560" IsPaneToggleButtonVisible="False">
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Send" Content="Send message" Tag="send" Tapped="SendPage" Margin="0,25,0,0"/>
                 <NavigationViewItem Icon="Mail" Content="Received messages" Tapped="ReceivedPage"/>
-                <NavigationViewItem Icon="Comment" Content="Comment"/>
-                <NavigationViewItem Content="Info">
+                <NavigationViewItem Icon="Comment" Content="Comment" Tapped="CommentPage"/>
+                <NavigationViewItem Content="Info" Tapped="InfoPage">
                     <NavigationViewItem.Icon>
                         <FontIcon Glyph="&#xE946;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem Icon="Setting" Content="Settings"/>
+                <NavigationViewItem Icon="Setting" Content="Settings" Tapped="SettingsPage"/>
             </NavigationView.MenuItems>
             <Frame x:Name="ContentFrame" Margin="0,-60,0,0"/>
         </NavigationView>

@@ -10,63 +10,62 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>c1a843b7-4fee-45a6-a48b-bdd27576f154</PackageIdentityName>
     <PackageIdentityPublisher>CN=cooler</PackageIdentityPublisher>
-    <IntermediateOutputPath>D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\obj\x64\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>D:\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\AppX</LayoutDir>
+    <LayoutDir>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\AppxManifest.xml">
+    <AppXManifest Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\clrcompression.dll">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.dll">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.dll">
       <PackagePath>ReChatterBotUWP.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.exe">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.exe">
       <PackagePath>ReChatterBotUWP.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.pdb">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.pdb">
       <PackagePath>ReChatterBotUWP.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterBot\ReChatterBotUWP\bin\x64\Release\ilc\resources.pri">
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -52,5 +52,20 @@ namespace ReChatterBotUWP
         {
             ContentFrame.Navigate(typeof(Received));
         }
+
+        private void CommentPage(object sender, TappedRoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(Comment));
+        }
+
+        private void InfoPage(object sender, TappedRoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(Info));
+        }
+
+        private void SettingsPage(object sender, TappedRoutedEventArgs e)
+        {
+            ContentFrame.Navigate(typeof(Settings));
+        }
     }
 }
