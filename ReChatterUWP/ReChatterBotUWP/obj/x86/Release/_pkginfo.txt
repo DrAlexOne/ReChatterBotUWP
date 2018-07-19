@@ -1,1 +1,1 @@
-D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AppPackages\ReChatterBotUWP_0.2.1.0_Test\ReChatterBotUWP_0.2.1.0_x86_x64_arm.appxbundle
+D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AppPackages\ReChatterBotUWP_0.3.2.0_Test\ReChatterBotUWP_0.3.2.0_x86_x64_arm.appxbundle

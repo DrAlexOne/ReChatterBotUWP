@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Telegram.Bot;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -22,9 +23,26 @@ namespace ReChatterBotUWP
     /// </summary>
     public sealed partial class Send : Page
     {
+        private static TelegramBotClient client;
         public Send()
         {
             this.InitializeComponent();
+            client = new TelegramBotClient(AppSettings.Key);
+        }
+
+        private async void Sendmessage(object sender, RoutedEventArgs e)
+        {
+            var chatId = RName.Text;
+            var messageText = MessageText.Text;
+
+            try
+            {
+                await client.SendTextMessageAsync(chatId, messageText);
+            }
+            catch
+            {
+                SendButton.Content = "Chat not  found. Try again";
+            }
         }
     }
 }

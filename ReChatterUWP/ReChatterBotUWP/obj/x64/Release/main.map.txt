@@ -15,3 +15,4 @@
 "D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\PackageLayout\Assets\Square150x150Logo.scale-200.png"			"Assets\Square150x150Logo.scale-200.png"
 "D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\PackageLayout\Assets\SplashScreen.scale-200.png"			"Assets\SplashScreen.scale-200.png"
 "D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\PackageLayout\Assets\LockScreenLogo.scale-200.png"			"Assets\LockScreenLogo.scale-200.png"
+"D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\PackageLayout\Assets\BadgeLogo.scale-200.png"			"Assets\BadgeLogo.scale-200.png"

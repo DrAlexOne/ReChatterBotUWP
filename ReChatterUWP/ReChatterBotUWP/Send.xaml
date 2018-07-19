@@ -14,7 +14,9 @@
             <TextBlock HorizontalAlignment="Left" Margin="15,18,0,0" Text="Send message" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
         </StackPanel>
         <StackPanel Margin="25,30,0,0">
-
+            <TextBox x:Name="RName" PlaceholderText="ReceiverID" Height="32" HorizontalAlignment="Left" Width="200"/>
+            <TextBox x:Name="MessageText" PlaceholderText="Message Text" HorizontalAlignment="Left" Width="500" Margin="0,15,50,0"/>
+            <Button x:Name="SendButton" Content="Send!" Margin="0,15,0,0" Click="Sendmessage" Padding="10,5,10,5"/>
         </StackPanel>
     </StackPanel>
 

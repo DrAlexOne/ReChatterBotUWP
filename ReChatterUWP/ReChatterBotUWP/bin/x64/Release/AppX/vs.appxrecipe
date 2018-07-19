@@ -19,54 +19,59 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>D:\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\AppX</LayoutDir>
-    <RegisteredManifestChecksum>FCBD294BE24B03DEB0CBFAF6B6CD854148B9A1DA055A5472A62901FC4530E35D</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>c1a843b7-4fee-45a6-a48b-bdd27576f154_0.1.0.0_x64__574mcq5q5mxfj</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>c1a843b7-4fee-45a6-a48b-bdd27576f154_574mcq5q5mxfj!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>c1a843b7-4fee-45a6-a48b-bdd27576f154</RegisteredPackageID>
+    <RegisteredManifestChecksum>2B21248C9DE6F57F7F6EE935B17FBB6E572DEA9CBAB905F1B20F6BBEC1244782</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>ReChatterBotUWPA_0.2.1.0_x64__574mcq5q5mxfj</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>ReChatterBotUWPA_574mcq5q5mxfj!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>ReChatterBotUWPA</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=cooler</RegisteredPackagePublisher>
-    <RegisteredVersion>0.1.0.0</RegisteredVersion>
+    <RegisteredVersion>0.2.1.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-07-13T14:32:52.668</Modified>
+      <Modified>2018-07-19T10:33:17.437</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-07-13T14:25:22.763</Modified>
+      <Modified>2018-07-19T10:28:43.920</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\BadgeLogo.scale-200.png">
+      <PackagePath>Assets\BadgeLogo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2018-07-19T06:50:54.947</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2018-07-13T12:26:54.026</Modified>
+      <Modified>2018-07-19T06:50:55.052</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-07-13T12:26:53.783</Modified>
+      <Modified>2018-07-19T06:50:54.841</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-07-13T12:26:53.843</Modified>
+      <Modified>2018-07-19T06:50:54.740</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-07-13T12:26:53.844</Modified>
+      <Modified>2018-07-19T06:50:54.841</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-07-13T12:26:53.715</Modified>
+      <Modified>2018-07-19T06:50:54.698</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-07-13T12:26:53.716</Modified>
+      <Modified>2018-07-19T06:50:54.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -74,44 +79,44 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Comment.xbf">
       <PackagePath>Comment.xbf</PackagePath>
-      <Modified>2018-07-13T14:25:22.765</Modified>
+      <Modified>2018-07-19T10:28:43.933</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Info.xbf">
       <PackagePath>Info.xbf</PackagePath>
-      <Modified>2018-07-13T14:25:22.767</Modified>
+      <Modified>2018-07-19T10:28:43.936</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-07-13T14:25:22.770</Modified>
+      <Modified>2018-07-19T10:28:43.938</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Received.xbf">
       <PackagePath>Received.xbf</PackagePath>
-      <Modified>2018-07-13T14:25:22.772</Modified>
+      <Modified>2018-07-19T10:28:43.940</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.dll">
       <PackagePath>ReChatterBotUWP.dll</PackagePath>
-      <Modified>2018-07-13T14:32:47.069</Modified>
+      <Modified>2018-07-19T10:33:13.616</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.exe">
       <PackagePath>ReChatterBotUWP.exe</PackagePath>
-      <Modified>2018-07-13T14:32:52.488</Modified>
+      <Modified>2018-07-19T10:33:17.074</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\ReChatterBotUWP.pdb">
       <PackagePath>ReChatterBotUWP.pdb</PackagePath>
-      <Modified>2018-07-13T14:32:52.083</Modified>
+      <Modified>2018-07-19T10:33:16.956</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-07-13T14:25:33.466</Modified>
+      <Modified>2018-07-19T08:32:11.653</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Send.xbf">
       <PackagePath>Send.xbf</PackagePath>
-      <Modified>2018-07-13T14:25:22.774</Modified>
+      <Modified>2018-07-19T10:28:43.942</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Settings.xbf">
       <PackagePath>Settings.xbf</PackagePath>
-      <Modified>2018-07-13T14:25:22.778</Modified>
+      <Modified>2018-07-19T10:28:43.944</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>

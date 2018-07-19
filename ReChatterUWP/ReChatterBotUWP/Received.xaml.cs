@@ -25,6 +25,19 @@ namespace ReChatterBotUWP
         public Received()
         {
             this.InitializeComponent();
+            ComingSoon();
+        }
+
+        async void ComingSoon()
+        {
+            ContentDialog ComingSoon = new ContentDialog()
+            {
+                Title = "Right now, its developing!",
+                Content = "Please, wait for next update",
+                CloseButtonText = "OK"
+            };
+
+            await ComingSoon.ShowAsync();
         }
     }
 }

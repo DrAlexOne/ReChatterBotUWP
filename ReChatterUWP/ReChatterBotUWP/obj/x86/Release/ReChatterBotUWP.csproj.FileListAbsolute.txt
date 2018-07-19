@@ -1281,3 +1281,5 @@ D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x86\Release\ilc\intermediate\Res
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x86\Release\ilc\intermediate\Resources\System.Transactions.Local.index.txt
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x86\Release\ilc\intermediate\rhbindargs.ReChatterBotUWP.rsp
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x86\Release\ilc\intermediate\System.Private.ReChatterBotUWP.Generated.dll
+D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x86\Release\ilc\Assets\BadgeLogo.scale-200.png
+D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x86\Release\ilc\in\Assets\BadgeLogo.scale-200.png
