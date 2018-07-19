@@ -1,1 +1,2 @@
-16.07.18 - Added pages, designed pages, some changes in Nav View Pane
+19.07.18 - v0.3 - Now, App can send messages and feedback
+16.07.18 - v0.2 - Added pages, designed pages, some changes in Nav View Pane
