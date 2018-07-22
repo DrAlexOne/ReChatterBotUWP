@@ -830,7 +830,6 @@ D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\WindowsBase.dll
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\mscorlib.dll
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\netstandard.dll
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\Telegram.Bot.dll
-D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\ReChatterBotUWP.csprojAssemblyReference.cache
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\App.g.i.cs
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\App.g.cs
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\MainPage.g.i.cs
@@ -1283,3 +1282,4 @@ D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\Settings.xbf
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\ilc\in\Square44x44Logo.targetsize-24_altform-unplated.png
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x64\Release\ilc\Assets\BadgeLogo.scale-200.png
 D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\ilc\in\Assets\BadgeLogo.scale-200.png
+D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\obj\x64\Release\ReChatterBotUWP.csprojAssemblyReference.cache
