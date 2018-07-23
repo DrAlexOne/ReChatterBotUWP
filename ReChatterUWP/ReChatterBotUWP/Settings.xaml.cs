@@ -25,6 +25,30 @@ namespace ReChatterBotUWP
         public Settings()
         {
             this.InitializeComponent();
+            if (AppSettings.Logged = true)
+            {
+                YourID.Text = "Your ID:" + AppSettings.UserID;
+                YourIDB.Content = "Log out";
+            }
+            else
+            {
+                YourID.Text = "You are not authorized" + AppSettings.UserID;
+                YourIDB.Content = "Log in";
+            }
+        }
+
+        private async void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (BotHostingSwitch.IsOn == false)
+            {
+                ContentDialog BotHostingDialog = new ContentDialog()
+                {
+                    Title = "Bot Hosting problem",
+                    Content = "Please, leave this switcher togged on, if you using unlimited networks",
+                    CloseButtonText = "Turn off",
+                    PrimaryButtonText = "Leave"
+                };
+            }
         }
     }
 }

@@ -5,6 +5,8 @@
     <AppxShowAllApps>False</AppxShowAllApps>
     <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
     <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
+    <BadgeLogoSource>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\Assets\StoreLogo.png</BadgeLogoSource>
+    <AppIconSource>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\Assets\StoreLogo.png</AppIconSource>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>

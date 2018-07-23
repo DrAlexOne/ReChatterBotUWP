@@ -16,6 +16,7 @@ using ReChatterBotUWP;
 using Windows.ApplicationModel.Core;
 using Windows.UI.ViewManagement;
 using Windows.UI;
+using ReChatterBotUWP.LogIn;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
 
@@ -41,6 +42,8 @@ namespace ReChatterBotUWP
             var full = (ApplicationView.GetForCurrentView().IsFullScreenMode);
             var left = 12 + (full ? 0 : CoreApplication.GetCurrentView().TitleBar.SystemOverlayLeftInset);
             AppTitle.Margin = new Thickness(left, 8, 0, 0);
+
+            Logged();
         }
 
         private void SendPage(object sender, TappedRoutedEventArgs e)
@@ -66,6 +69,20 @@ namespace ReChatterBotUWP
         private void SettingsPage(object sender, TappedRoutedEventArgs e)
         {
             ContentFrame.Navigate(typeof(Settings));
+        }
+
+        async void Logged()
+        {
+            if (AppSettings.Logged == false)
+            {
+                AuthorizeDialog LoginD = new AuthorizeDialog();
+                await LoginD.ShowAsync();
+
+                if (LoginD.Result == SignInResult.SignInOK)
+                {
+                    this.Frame.Navigate(typeof(LoginPage1));
+                }
+            }
         }
     }
 }

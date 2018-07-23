@@ -39,9 +39,9 @@ namespace ReChatterBotUWP
             {
                 await client.SendTextMessageAsync(chatId, messageText);
             }
-            catch
+            catch(Exception ex)
             {
-                SendButton.Content = "Chat not  found. Try again";
+                SendButton.Content = "An error occurred: " + ex + ". Try again";
             }
         }
     }

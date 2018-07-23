@@ -8,15 +8,32 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel Margin="10,10,0,0">
-        <StackPanel Orientation="Horizontal">
-            <FontIcon Glyph="&#xE713;" Margin="25,25,0,0" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <TextBlock HorizontalAlignment="Left" Margin="15,18,0,0" Text="Settings" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
-        </StackPanel>
-        <StackPanel Margin="25,30,0,0">
-            
+    <ScrollViewer>
+        <StackPanel Margin="10,10,0,0">
+            <StackPanel Orientation="Horizontal">
+                <FontIcon Glyph="&#xE713;" Margin="25,25,0,0" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock HorizontalAlignment="Left" Margin="15,18,0,0" Text="Settings" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
+            </StackPanel>
+
+            <StackPanel Margin="25,30,0,0">
+
+                <TextBlock Text="About you" FontSize="22" Margin="0,0,0,10"/>
+                <StackPanel Tag="Name">
+                    <TextBox Header="Your name" PlaceholderText="Name" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="17"/>
+                    <Button Content="Apply" Width="75" Height="35" Margin="0,10,0,0"/>
+                </StackPanel>
+                <StackPanel Tag="UserIDS" Margin="0,20,0,0">
+                    <TextBlock x:ConnectionId='3' x:Name="YourID" Width="300" Text="Your ID: "  HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="17"/>
+                    <Button Content="Log out" Width="85" Height="35" Margin="0,10,0,0"/>
+                </StackPanel>
+
+                <TextBlock Text="Bot hosting" FontSize="22" Margin="0,20,0,10"/>
+                <ToggleSwitch x:ConnectionId='2' x:Name="BotHostingSwitch" Header="Bot background hosting (Alpha)" FontSize="17" IsOn="True"                               />
+
+            </StackPanel>
+
         </StackPanel>
 
-    </StackPanel>
+    </ScrollViewer>
 </Page>
 
