@@ -1,2 +1,5 @@
+25.07.18 - v0.6 - Added Option "Show my name" in send page. Added actions to Content Dialog Buttons
+23.07.18 - v0.5 - Added Settings, Authorithation.
+XX.07.18 - v0.4 - Changed TOKEN, added more security
 19.07.18 - v0.3 - Now, App can send messages and feedback
 16.07.18 - v0.2 - Added pages, designed pages, some changes in Nav View Pane
