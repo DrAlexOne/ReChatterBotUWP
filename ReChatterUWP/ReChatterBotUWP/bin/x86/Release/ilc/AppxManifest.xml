@@ -7,7 +7,7 @@
 
  Дополнительные сведения о файлах манифестов приложений см. по адресу http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="ReChatterBotUWPA" Publisher="CN=cooler" Version="0.4.4.0" ProcessorArchitecture="x86" />
+  <Identity Name="ReChatterBotUWPA" Publisher="CN=cooler" Version="0.6.9.0" ProcessorArchitecture="x86" />
   <mp:PhoneIdentity PhoneProductId="c1a843b7-4fee-45a6-a48b-bdd27576f154" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>ReChatter Bot App</DisplayName>
@@ -27,7 +27,7 @@
     <Application Id="App" Executable="ReChatterBotUWP.exe" EntryPoint="ReChatterBotUWP.App">
       <uap:VisualElements DisplayName="ReChatterBotUWP" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ReChatterBotUWP" BackgroundColor="transparent">
         <uap:LockScreen Notification="badge" BadgeLogo="Assets\BadgeLogo.png" />
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\LargeTile.png" Square71x71Logo="Assets\SmallTile.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>

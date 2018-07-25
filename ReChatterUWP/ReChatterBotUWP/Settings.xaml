@@ -19,8 +19,8 @@
 
                 <TextBlock Text="About you" FontSize="22" Margin="0,0,0,10"/>
                 <StackPanel Tag="Name">
-                    <TextBox Header="Your name" PlaceholderText="Name" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="17"/>
-                    <Button Content="Apply" Width="75" Height="35" Margin="0,10,0,0"/>
+                    <TextBox x:Name="TextUserName" Header="Your name" PlaceholderText="Name" Width="300" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="17"/>
+                    <Button Content="Apply" Width="75" Height="35" Margin="0,10,0,0" Click="UserNameApply"/>
                 </StackPanel>
                 <StackPanel x:Name="LoginInfo" Margin="0,20,0,0">
                     <TextBlock x:Name="YourID" Width="300" Text="Your ID: "  HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="17"/>

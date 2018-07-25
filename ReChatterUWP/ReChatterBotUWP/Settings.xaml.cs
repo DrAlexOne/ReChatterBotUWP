@@ -25,7 +25,7 @@ namespace ReChatterBotUWP
         public Settings()
         {
             this.InitializeComponent();
-            if (AppSettings.Logged = true)
+            if (AppSettings.Logged == true)
             {
                 YourID.Text = "Your ID:" + AppSettings.UserID;
                 YourIDB.Content = "Log out";
@@ -46,9 +46,29 @@ namespace ReChatterBotUWP
                     Title = "Bot Hosting problem",
                     Content = "Please, leave this switcher togged on, if you using unlimited networks",
                     CloseButtonText = "Turn off",
-                    PrimaryButtonText = "Leave"
+                    PrimaryButtonText = "Leave on"
                 };
+
+                BotHostingDialog.CloseButtonClick += BotHostingDialogClose;
+                BotHostingDialog.PrimaryButtonClick += BotHostingDialogPrimary;
+
+                await BotHostingDialog.ShowAsync();
             }
+        }
+
+        private void BotHostingDialogClose(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            BotHostingSwitch.IsOn = false;
+        }
+
+        private void BotHostingDialogPrimary(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            BotHostingSwitch.IsOn = true;
+        }
+
+        private void UserNameApply(object sender, RoutedEventArgs e)
+        {
+            AppSettings.UserName = TextUserName.Text;
         }
     }
 }

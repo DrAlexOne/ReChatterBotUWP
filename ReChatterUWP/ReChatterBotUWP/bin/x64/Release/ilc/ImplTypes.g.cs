@@ -57615,18 +57615,6 @@ namespace Windows.UI.Xaml.Controls
 				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
 			}
 
-			public static void put_PrimaryButtonCommandParameter(
-						global::System.__ComObject __this, 
-						object value)
-			{
-				global::__Interop.ForwardComStubs.Stub_21<global::Windows.UI.Xaml.Controls.IContentDialog>(
-									__this, 
-									value, 
-									21
-								);
-				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
-			}
-
 			// Signature, Windows.UI.Xaml.Controls.IContentDialog.add_Closing, [fwd] [return] [EETypeRva:0x000406BC] void__int, [fwd] [in] [EETypeRva:0x0003F504] Windows_Foundation_TypedEventHandler_2_Windows_UI_Xaml_Controls_ContentDialog__Windows_UI_Xaml_Controls_ContentDialogClosingEventArgs___Windows_Foundation__TypedEventHandler_A__wux__Controls_ContentDialog_j__wux__Controls_ContentDialogClosingEventArgs_V_ *, [fwd] [out] [retval] [nativebyref] [EETypeRva:0x0004157C] System_Runtime_InteropServices_WindowsRuntime_EventRegistrationToken__Windows_Foundation__EventRegistrationToken, 
 			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_Closing(
 						global::System.__ComObject __this, 
@@ -60355,6 +60343,29 @@ namespace Windows.UI.Xaml.Controls
 		}
 	}
 
+	// Windows.UI.Xaml.Controls.ICheckBoxFactory
+	public unsafe static class ICheckBoxFactory__Impl
+	{
+		// StubClass for 'Windows.UI.Xaml.Controls.ICheckBoxFactory'
+		public static partial class Stubs
+		{
+			public static global::System.IntPtr CreateInstance(
+						global::System.__ComObject __this, 
+						global::System.IntPtr outer, 
+						out global::System.IntPtr inner)
+			{
+				global::System.IntPtr __ret = global::__Interop.ForwardComStubs.Stub_13<global::Windows.UI.Xaml.Controls.ICheckBoxFactory>(
+									__this, 
+									outer, 
+									out inner, 
+									6
+								);
+				global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+				return __ret;
+			}
+		}
+	}
+
 	// Windows.UI.Xaml.Controls.IScrollViewer
 	public unsafe static class IScrollViewer__Impl
 	{
@@ -60763,6 +60774,83 @@ namespace Windows.UI.Xaml.Controls.Primitives
 		// StubClass for 'Windows.UI.Xaml.Controls.Primitives.IToggleButton'
 		public static partial class Stubs
 		{
+			// Signature, Windows.UI.Xaml.Controls.Primitives.IToggleButton.get_IsChecked, [fwd] [return] [EETypeRva:0x000406BC] void__int, [fwd] [out] [retval] [nativebyref] [EETypeRva:0x0003FEBC] System_Nullable_1_bool___Windows_Foundation__IReference_A_bool_V_ *, 
+			public static global::System.Nullable<bool> get_IsChecked(global::System.__ComObject __this)
+			{
+				// Setup
+				void* unsafe_value__retval = default(void*);
+				global::System.Nullable<bool> value__retval = default(global::System.Nullable<bool>);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					unsafe_value__retval = null;
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.UI.Xaml.Controls.Primitives.IToggleButton).TypeHandle, 
+										6, 
+										&(unsafe_value__retval)
+									);
+					global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+					if (unsafe_value__retval != null)
+						value__retval = (bool)global::System.Runtime.InteropServices.McgMarshal.UnboxIfBoxed(
+											global::System.Runtime.InteropServices.McgMarshal.ComInterfaceToObject_NoUnboxing(
+																((global::System.IntPtr)unsafe_value__retval), 
+																typeof(global::Windows.Foundation.IReference<bool>).TypeHandle
+															), 
+											"Windows.Foundation.IReference`1<Boolean>"
+										);
+					else
+						value__retval = null;
+					// Return
+					return value__retval;
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value__retval)));
+				}
+			}
+
+			// Signature, Windows.UI.Xaml.Controls.Primitives.IToggleButton.put_IsChecked, [fwd] [return] [EETypeRva:0x000406BC] void__int, [fwd] [in] [EETypeRva:0x0003FEBC] System_Nullable_1_bool___Windows_Foundation__IReference_A_bool_V_ *, 
+			public static void put_IsChecked(
+						global::System.__ComObject __this, 
+						global::System.Nullable<bool> value)
+			{
+				// Setup
+				void* unsafe_value = default(void*);
+				int unsafe___hr;
+				try
+				{
+					// Marshalling
+					if (value.HasValue)
+					{
+						global::System.Runtime.InteropServices.WindowsRuntime.ReferenceImpl<bool> unsafe_value_Wrapper = new global::System.Runtime.InteropServices.WindowsRuntime.ReferenceImpl<bool>(value.Value, 11);
+						unsafe_value = (void*)global::System.Runtime.InteropServices.McgMarshal.ManagedObjectToComInterface(
+											unsafe_value_Wrapper, 
+											typeof(global::Windows.Foundation.IReference<bool>).TypeHandle
+										);
+					}
+					else
+						unsafe_value = null;
+					// Call to native method
+					unsafe___hr = global::__Interop.ComCallHelpers.Call(
+										__this, 
+										typeof(global::Windows.UI.Xaml.Controls.Primitives.IToggleButton).TypeHandle, 
+										7, 
+										unsafe_value
+									);
+					global::System.Diagnostics.DebugAnnotations.PreviousCallContainsDebuggerStepInCode();
+					// Return
+				}
+				finally
+				{
+					// Cleanup
+					global::System.Runtime.InteropServices.McgMarshal.ComSafeRelease(new global::System.IntPtr(((void*)unsafe_value)));
+				}
+			}
+
 			public static global::System.Runtime.InteropServices.WindowsRuntime.EventRegistrationToken add_Checked(
 						global::System.__ComObject __this, 
 						global::Windows.UI.Xaml.RoutedEventHandler value)

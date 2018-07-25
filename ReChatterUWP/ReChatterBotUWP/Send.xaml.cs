@@ -32,8 +32,16 @@ namespace ReChatterBotUWP
 
         private async void Sendmessage(object sender, RoutedEventArgs e)
         {
+            string messageText;
             var chatId = RName.Text;
-            var messageText = MessageText.Text;
+            if (CheckBoxName.IsChecked == true)
+            {
+                messageText = AppSettings.UserName +": " + MessageText.Text;
+            }
+            else
+            {
+                messageText = MessageText.Text;
+            }
 
             try
             {
@@ -43,6 +51,35 @@ namespace ReChatterBotUWP
             {
                 SendButton.Content = "An error occurred: " + ex + ". Try again";
             }
+        }
+
+        private async void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (AppSettings.UserName == "")
+            {
+                ContentDialog UserEmpty = new ContentDialog()
+                {
+                    Title = "Username error",
+                    Content = "Please, enter your name in Settings page",
+                    CloseButtonText = "Cancel",
+                    PrimaryButtonText = "Go to Settings"
+                };
+                UserEmpty.PrimaryButtonClick += GoToSettings;
+                UserEmpty.CloseButtonClick += UserEmptyButtonClose;
+
+                await UserEmpty.ShowAsync();
+            }
+        }
+
+        private void GoToSettings(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            Frame.Navigate(typeof(Settings));
+            CheckBoxName.IsChecked = false;
+        }
+
+        private void UserEmptyButtonClose(ContentDialog sender, ContentDialogButtonClickEventArgs args)
+        {
+            CheckBoxName.IsChecked = false;
         }
     }
 }

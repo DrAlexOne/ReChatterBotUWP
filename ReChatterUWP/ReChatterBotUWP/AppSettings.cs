@@ -22,5 +22,7 @@ namespace ReChatterBotUWP
 
         public static TelegramBotClient client { get; set; } = new TelegramBotClient(AppSettings.Key);
 
+        public static string UserName { get; set; } = "";
+
     }
 }
