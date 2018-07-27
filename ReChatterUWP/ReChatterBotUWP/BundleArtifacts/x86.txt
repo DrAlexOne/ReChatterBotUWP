@@ -1,2 +1,2 @@
-MainPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x86\Release\ReChatterBotUWP_0.6.9.0_x86.appx
-SymbolPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AppPackages\ReChatterBotUWP_0.6.9.0_Test\ReChatterBotUWP_0.6.9.0_x86.appxsym
+MainPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\x86\Release\ReChatterBotUWP_0.7.10.0_x86.appx
+SymbolPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AppPackages\ReChatterBotUWP_0.7.10.0_Test\ReChatterBotUWP_0.7.10.0_x86.appxsym

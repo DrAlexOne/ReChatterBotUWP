@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="ReChatterBotUWP.Info"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ReChatterBotUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Margin="10,10,0,0">
+        <StackPanel Orientation="Horizontal">
+            <FontIcon Glyph="&#xE946;" Margin="25,25,0,0" FontSize="30" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TextBlock HorizontalAlignment="Left" Margin="15,18,0,0" Text="Info" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
+        </StackPanel>
+        <StackPanel Margin="25,30,0,0">
+
+        </StackPanel>
+    </StackPanel>
+
+</Page>
+

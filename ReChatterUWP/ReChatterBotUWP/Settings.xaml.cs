@@ -32,38 +32,9 @@ namespace ReChatterBotUWP
             }
             else
             {
-                YourID.Text = "You are not authorized" + AppSettings.UserID;
+                YourID.Text = "You are not authorized";
                 YourIDB.Content = "Log in";
             }
-        }
-
-        private async void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
-        {
-            if (BotHostingSwitch.IsOn == false)
-            {
-                ContentDialog BotHostingDialog = new ContentDialog()
-                {
-                    Title = "Bot Hosting problem",
-                    Content = "Please, leave this switcher togged on, if you using unlimited networks",
-                    CloseButtonText = "Turn off",
-                    PrimaryButtonText = "Leave on"
-                };
-
-                BotHostingDialog.CloseButtonClick += BotHostingDialogClose;
-                BotHostingDialog.PrimaryButtonClick += BotHostingDialogPrimary;
-
-                await BotHostingDialog.ShowAsync();
-            }
-        }
-
-        private void BotHostingDialogClose(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
-            BotHostingSwitch.IsOn = false;
-        }
-
-        private void BotHostingDialogPrimary(ContentDialog sender, ContentDialogButtonClickEventArgs args)
-        {
-            BotHostingSwitch.IsOn = true;
         }
 
         private void UserNameApply(object sender, RoutedEventArgs e)

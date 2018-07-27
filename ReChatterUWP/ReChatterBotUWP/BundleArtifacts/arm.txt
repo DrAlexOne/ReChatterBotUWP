@@ -1,6 +1,6 @@
-MainPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.6.9.0_ARM.appx
-SymbolPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AppPackages\ReChatterBotUWP_0.6.9.0_Test\ReChatterBotUWP_0.6.9.0_ARM.appxsym
-ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.6.9.0_scale-100.appx
-ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.6.9.0_scale-125.appx
-ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.6.9.0_scale-150.appx
-ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.6.9.0_scale-400.appx
+MainPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.7.10.0_ARM.appx
+SymbolPackage=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AppPackages\ReChatterBotUWP_0.7.10.0_Test\ReChatterBotUWP_0.7.10.0_ARM.appxsym
+ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.7.10.0_scale-100.appx
+ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.7.10.0_scale-125.appx
+ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.7.10.0_scale-150.appx
+ResourcePack=D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\bin\ARM\Release\ReChatterBotUWP_0.7.10.0_scale-400.appx

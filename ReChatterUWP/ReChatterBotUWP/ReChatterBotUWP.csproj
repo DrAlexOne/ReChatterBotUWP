@@ -102,7 +102,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="AppSettings.cs" />
-    <Compile Include="BotCore.cs" />
     <Compile Include="LogIn\AuthorizeDialog.xaml.cs">
       <DependentUpon>AuthorizeDialog.xaml</DependentUpon>
     </Compile>

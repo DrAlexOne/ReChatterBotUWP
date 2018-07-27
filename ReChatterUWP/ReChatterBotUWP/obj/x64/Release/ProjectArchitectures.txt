@@ -1,0 +1,1 @@
+D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\ReChatterBotUWP.csproj;x64
