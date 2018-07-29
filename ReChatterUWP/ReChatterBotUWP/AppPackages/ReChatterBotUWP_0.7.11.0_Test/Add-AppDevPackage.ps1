@@ -1,28 +1,3 @@
-﻿#
-# Add-AppxDevPackage.ps1 is a PowerShell script designed to install app
-# packages created by Visual Studio for developers.  To run this script from
-# Explorer, right-click on its icon and choose "Run with PowerShell".
-#
-# Visual Studio supplies this script in the folder generated with its
-# "Prepare Package" command.  The same folder will also contain the app
-# package (a .appx file), the signing certificate (a .cer file), and a
-# "Dependencies" subfolder containing all the framework packages used by the
-# app.
-#
-# This script simplifies installing these packages by automating the
-# following functions:
-#   1. Find the app package and signing certificate in the script directory
-#   2. Prompt the user to acquire a developer license and to install the
-#      certificate if necessary
-#   3. Find dependency packages that are applicable to the operating system's
-#      CPU architecture
-#   4. Install the package along with all applicable dependencies
-#
-# All command line parameters are reserved for use internally by the script.
-# Users should launch this script from Explorer.
-#
-
-# .Link
 # http://go.microsoft.com/fwlink/?LinkId=243053
 
 param(
@@ -33,11 +8,6 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-# The language resources for this script are placed in the
-# "Add-AppDevPackage.resources" subfolder alongside the script.  Since the
-# current working directory might not be the directory that contains the
-# script, we need to create the full path of the resources directory to
-# pass into Import-LocalizedData
 $ScriptPath = $null
 try
 {
@@ -92,10 +62,6 @@ function PrintMessageAndExit($ErrorMessage, $ReturnCode)
     exit $ReturnCode
 }
 
-#
-# Warns the user about installing certificates, and presents a Yes/No prompt
-# to confirm the action.  The default is set to No.
-#
 function ConfirmCertificateInstall
 {
     $Answer = $host.UI.PromptForChoice(
@@ -107,11 +73,7 @@ function ConfirmCertificateInstall
     return $Answer -eq 0
 }
 
-#
-# Validates whether a file is a valid certificate using CertUtil.
-# This needs to be done before calling Get-PfxCertificate on the file, otherwise
-# the user will get a cryptic "Password: " prompt for invalid certs.
-#
+
 function ValidateCertificateFormat($FilePath)
 {
     # certutil -verify prints a lot of text that we don't need, so it's redirected to $null here
@@ -129,20 +91,6 @@ function ValidateCertificateFormat($FilePath)
     }
 }
 
-#
-# Verify that the developer certificate meets the following restrictions:
-#   - The certificate must contain a Basic Constraints extension, and its
-#     Certificate Authority (CA) property must be false.
-#   - The certificate's Key Usage extension must be either absent, or set to
-#     only DigitalSignature.
-#   - The certificate must contain an Extended Key Usage (EKU) extension with
-#     Code Signing usage.
-#   - The certificate must NOT contain any other EKU except Code Signing and
-#     Lifetime Signing.
-#
-# These restrictions are enforced to decrease security risks that arise from
-# trusting digital certificates.
-#
 function CheckCertificateRestrictions
 {
     Set-Variable -Name BasicConstraintsExtensionOid -Value "2.5.29.19" -Option Constant
@@ -207,11 +155,6 @@ function CheckCertificateRestrictions
     }
 }
 
-#
-# Performs operations that require administrative privileges:
-#   - Prompt the user to obtain a developer license
-#   - Install the developer certificate (if -Force is not specified, also prompts the user to confirm)
-#
 function DoElevatedOperations
 {
     if ($GetDeveloperLicense)
@@ -258,9 +201,7 @@ function DoElevatedOperations
     }
 }
 
-#
-# Checks whether the machine is missing a valid developer license.
-#
+
 function CheckIfNeedDeveloperLicense
 {
     $Result = $true
@@ -273,11 +214,6 @@ function CheckIfNeedDeveloperLicense
     return $Result
 }
 
-#
-# Launches an elevated process running the current script to perform tasks
-# that require administrative privileges.  This function waits until the
-# elevated process terminates, and checks whether those tasks were successful.
-#
 function LaunchElevated
 {
     # Set up command line arguments to the elevated process
@@ -338,21 +274,7 @@ function LaunchElevated
     }
 }
 
-#
-# Finds all applicable dependency packages according to OS architecture, and
-# installs the developer package with its dependencies.  The expected layout
-# of dependencies is:
-#
-# <current dir>
-#     \Dependencies
-#         <Architecture neutral dependencies>.appx
-#         \x86
-#             <x86 dependencies>.appx
-#         \x64
-#             <x64 dependencies>.appx
-#         \arm
-#             <arm dependencies>.appx
-#
+
 function InstallPackageWithDependencies
 {
     $DependencyPackagesDir = (Join-Path $ScriptDir "Dependencies")
@@ -411,9 +333,6 @@ function InstallPackageWithDependencies
     }
 }
 
-#
-# Main script logic when the user launches the script without parameters.
-#
 function DoStandardOperations
 {
     # List all .appx files in the script directory
@@ -555,9 +474,6 @@ function DoStandardOperations
     InstallPackageWithDependencies
 }
 
-#
-# Main script entry point
-#
 if ($GetDeveloperLicense -or $CertificatePath)
 {
     DoElevatedOperations
