@@ -1,28 +1,3 @@
-﻿#
-# Add-AppxDevPackage.ps1 is a PowerShell script designed to install app
-# packages created by Visual Studio for developers.  To run this script from
-# Explorer, right-click on its icon and choose "Run with PowerShell".
-#
-# Visual Studio supplies this script in the folder generated with its
-# "Prepare Package" command.  The same folder will also contain the app
-# package (a .appx file), the signing certificate (a .cer file), and a
-# "Dependencies" subfolder containing all the framework packages used by the
-# app.
-#
-# This script simplifies installing these packages by automating the
-# following functions:
-#   1. Find the app package and signing certificate in the script directory
-#   2. Prompt the user to acquire a developer license and to install the
-#      certificate if necessary
-#   3. Find dependency packages that are applicable to the operating system's
-#      CPU architecture
-#   4. Install the package along with all applicable dependencies
-#
-# All command line parameters are reserved for use internally by the script.
-# Users should launch this script from Explorer.
-#
-
-# .Link
 # http://go.microsoft.com/fwlink/?LinkId=243053
 
 param(
@@ -33,11 +8,6 @@ param(
 
 $ErrorActionPreference = "Stop"
 
-# The language resources for this script are placed in the
-# "Add-AppDevPackage.resources" subfolder alongside the script.  Since the
-# current working directory might not be the directory that contains the
-# script, we need to create the full path of the resources directory to
-# pass into Import-LocalizedData
 $ScriptPath = $null
 try
 {
@@ -92,10 +62,6 @@ function PrintMessageAndExit($ErrorMessage, $ReturnCode)
     exit $ReturnCode
 }
 
-#
-# Warns the user about installing certificates, and presents a Yes/No prompt
-# to confirm the action.  The default is set to No.
-#
 function ConfirmCertificateInstall
 {
     $Answer = $host.UI.PromptForChoice(
@@ -107,21 +73,16 @@ function ConfirmCertificateInstall
     return $Answer -eq 0
 }
 
-#
-# Validates whether a file is a valid certificate using CertUtil.
-# This needs to be done before calling Get-PfxCertificate on the file, otherwise
-# the user will get a cryptic "Password: " prompt for invalid certs.
-#
+
 function ValidateCertificateFormat($FilePath)
 {
-    # certutil -verify prints a lot of text that we don't need, so it's redirected to $null here
+
     certutil.exe -verify $FilePath > $null
     if ($LastExitCode -lt 0)
     {
         PrintMessageAndExit ($UiStrings.ErrorBadCertificate -f $FilePath, $LastExitCode) $ErrorCodes.BadCertificate
     }
     
-    # Check if certificate is expired
     $cert = Get-PfxCertificate $FilePath
     if (($cert.NotBefore -gt (Get-Date)) -or ($cert.NotAfter -lt (Get-Date)))
     {
@@ -129,20 +90,7 @@ function ValidateCertificateFormat($FilePath)
     }
 }
 
-#
-# Verify that the developer certificate meets the following restrictions:
-#   - The certificate must contain a Basic Constraints extension, and its
-#     Certificate Authority (CA) property must be false.
-#   - The certificate's Key Usage extension must be either absent, or set to
-#     only DigitalSignature.
-#   - The certificate must contain an Extended Key Usage (EKU) extension with
-#     Code Signing usage.
-#   - The certificate must NOT contain any other EKU except Code Signing and
-#     Lifetime Signing.
-#
-# These restrictions are enforced to decrease security risks that arise from
-# trusting digital certificates.
-#
+
 function CheckCertificateRestrictions
 {
     Set-Variable -Name BasicConstraintsExtensionOid -Value "2.5.29.19" -Option Constant
@@ -157,10 +105,10 @@ function CheckCertificateRestrictions
 
     foreach ($Extension in $CertificateExtensions)
     {
-        # Certificate must contain the Basic Constraints extension
+
         if ($Extension.oid.value -eq $BasicConstraintsExtensionOid)
         {
-            # CA property must be false
+
             if ($Extension.CertificateAuthority)
             {
                 PrintMessageAndExit $UiStrings.ErrorCertIsCA $ErrorCodes.CertIsCA
@@ -168,7 +116,7 @@ function CheckCertificateRestrictions
             $HasBasicConstraints = $true
         }
 
-        # If key usage is present, it must be set to digital signature
+
         elseif ($Extension.oid.value -eq $KeyUsageExtensionOid)
         {
             if ($Extension.KeyUsages -ne "DigitalSignature")
@@ -179,14 +127,14 @@ function CheckCertificateRestrictions
 
         elseif ($Extension.oid.value -eq $EkuExtensionOid)
         {
-            # Certificate must contain the Code Signing EKU
+
             $EKUs = $Extension.EnhancedKeyUsages.Value
             if ($EKUs -contains $CodeSigningEkuOid)
             {
                 $HasCodeSigningEKU = $True
             }
 
-            # EKUs other than code signing and lifetime signing are not allowed
+
             foreach ($EKU in $EKUs)
             {
                 if ($EKU -ne $CodeSigningEkuOid -and $EKU -ne $LifetimeSigningEkuOid)
@@ -207,11 +155,6 @@ function CheckCertificateRestrictions
     }
 }
 
-#
-# Performs operations that require administrative privileges:
-#   - Prompt the user to obtain a developer license
-#   - Install the developer certificate (if -Force is not specified, also prompts the user to confirm)
-#
 function DoElevatedOperations
 {
     if ($GetDeveloperLicense)
@@ -228,7 +171,7 @@ function DoElevatedOperations
         }
         catch
         {
-            $Error[0] # Dump details about the last error
+            $Error[0]
             PrintMessageAndExit $UiStrings.ErrorGetDeveloperLicenseFailed $ErrorCodes.GetDeveloperLicenseFailed
         }
     }
@@ -237,14 +180,14 @@ function DoElevatedOperations
     {
         Write-Host $UiStrings.InstallingCertificate
 
-        # Make sure certificate format is valid and usage constraints are followed
+        
         ValidateCertificateFormat $CertificatePath
         CheckCertificateRestrictions
 
-        # If -Force is not specified, warn the user and get consent
+        
         if ($Force -or (ConfirmCertificateInstall))
         {
-            # Add cert to store
+
             certutil.exe -addstore TrustedPeople $CertificatePath
             if ($LastExitCode -lt 0)
             {
@@ -258,9 +201,6 @@ function DoElevatedOperations
     }
 }
 
-#
-# Checks whether the machine is missing a valid developer license.
-#
 function CheckIfNeedDeveloperLicense
 {
     $Result = $true
@@ -273,14 +213,8 @@ function CheckIfNeedDeveloperLicense
     return $Result
 }
 
-#
-# Launches an elevated process running the current script to perform tasks
-# that require administrative privileges.  This function waits until the
-# elevated process terminates, and checks whether those tasks were successful.
-#
 function LaunchElevated
 {
-    # Set up command line arguments to the elevated process
     $RelaunchArgs = '-ExecutionPolicy Unrestricted -file "' + $ScriptPath + '"'
 
     if ($Force)
@@ -296,14 +230,13 @@ function LaunchElevated
         $RelaunchArgs += ' -CertificatePath "' + $DeveloperCertificatePath.FullName + '"'
     }
 
-    # Launch the process and wait for it to finish
     try
     {
         $AdminProcess = Start-Process "$PsHome\PowerShell.exe" -Verb RunAs -ArgumentList $RelaunchArgs -PassThru
     }
     catch
     {
-        $Error[0] # Dump details about the last error
+        $Error[0]
         PrintMessageAndExit $UiStrings.ErrorLaunchAdminFailed $ErrorCodes.LaunchAdminFailed
     }
 
@@ -312,7 +245,6 @@ function LaunchElevated
         Start-Sleep -Seconds 2
     }
 
-    # Check if all elevated operations were successful
     if ($NeedDeveloperLicense)
     {
         if (CheckIfNeedDeveloperLicense)
@@ -338,31 +270,14 @@ function LaunchElevated
     }
 }
 
-#
-# Finds all applicable dependency packages according to OS architecture, and
-# installs the developer package with its dependencies.  The expected layout
-# of dependencies is:
-#
-# <current dir>
-#     \Dependencies
-#         <Architecture neutral dependencies>.appx
-#         \x86
-#             <x86 dependencies>.appx
-#         \x64
-#             <x64 dependencies>.appx
-#         \arm
-#             <arm dependencies>.appx
-#
 function InstallPackageWithDependencies
 {
     $DependencyPackagesDir = (Join-Path $ScriptDir "Dependencies")
     $DependencyPackages = @()
     if (Test-Path $DependencyPackagesDir)
     {
-        # Get architecture-neutral dependencies
         $DependencyPackages += Get-ChildItem (Join-Path $DependencyPackagesDir "*.appx") | Where-Object { $_.Mode -NotMatch "d" }
 
-        # Get architecture-specific dependencies
         if (($Env:Processor_Architecture -eq "x86" -or $Env:Processor_Architecture -eq "amd64") -and (Test-Path (Join-Path $DependencyPackagesDir "x86")))
         {
             $DependencyPackages += Get-ChildItem (Join-Path $DependencyPackagesDir "x86\*.appx") | Where-Object { $_.Mode -NotMatch "d" }
@@ -411,9 +326,6 @@ function InstallPackageWithDependencies
     }
 }
 
-#
-# Main script logic when the user launches the script without parameters.
-#
 function DoStandardOperations
 {
     # List all .appx files in the script directory
@@ -477,8 +389,6 @@ function DoStandardOperations
         PrintMessageAndExit $UiStrings.ErrorPackageUnsigned $ErrorCodes.PackageUnsigned
     }
 
-    # Test if the package signature is trusted.  If not, the corresponding certificate
-    # needs to be present in the current directory and needs to be installed.
     $NeedInstallCertificate = ($PackageSignature.Status -ne "Valid")
 
     if ($NeedInstallCertificate)
@@ -511,7 +421,6 @@ function DoStandardOperations
 
     $NeedDeveloperLicense = CheckIfNeedDeveloperLicense
 
-    # Relaunch the script elevated with the necessary parameters if needed
     if ($NeedDeveloperLicense -or $NeedInstallCertificate)
     {
         Write-Host $UiStrings.ElevateActions
