@@ -12,13 +12,13 @@ namespace ReChatterBotUWP
 
         public static string theme { get; set; } = "light";
 
-        public static string Key { get; set; } = "|||-TOKEN-|||";
+        public static string Key { get; set; } = "573711040:AAFwkfRyeyO2BEaSnhNQUCDwTcAoQtdCTtc";
 
         public static string UserID { get; set; } = "0";
 
         public static bool Logged { get; set; } = false;
 
-        public static int CheckCode { get; set; }
+        public static string CheckCode { get; set; }
 
         public static TelegramBotClient client { get; set; } = new TelegramBotClient(AppSettings.Key);
 

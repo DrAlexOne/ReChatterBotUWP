@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Telegram.Bot;
+using ReChatterBotUWP.LogIn;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,6 +30,11 @@ namespace ReChatterBotUWP
         {
             this.InitializeComponent();
             client = new TelegramBotClient(AppSettings.Key);
+
+            IKbutton.IsChecked = true;
+
+            True.Visibility = Visibility.Visible;
+            False.Visibility = Visibility.Collapsed;
         }
 
         private async void NextLogin(object sender, RoutedEventArgs e)
@@ -37,20 +43,18 @@ namespace ReChatterBotUWP
             {
                 Random r = new Random();
 
-                int a1 = r.Next(1, 10);
-                int b1 = r.Next(1, 10);
-                int c1 = r.Next(1, 10);
-                int d1 = r.Next(1, 10);
-                int e1 = r.Next(1, 10);
-                int f1 = r.Next(1, 10);
+                string a1 = r.Next(1, 10).ToString();
+                string b1 = r.Next(1, 10).ToString();
+                string c1 = r.Next(1, 10).ToString();
+                string d1 = r.Next(1, 10).ToString();
+                string e1 = r.Next(1, 10).ToString();
+                string f1 = r.Next(1, 10).ToString();
 
                 AppSettings.CheckCode = a1 + b1 + c1 + d1 + e1 + f1;
                 AppSettings.UserID = UserID.Text;
-                await client.SendTextMessageAsync(UserID.Text, "Your authorization code: " + AppSettings.CheckCode.ToString() + ". If you shouldn't get this code, ignore this message");
+                await client.SendTextMessageAsync(UserID.Text, "Your authorization code: " + a1 + b1 + c1 + d1 + e1 + f1 + ". If you shouldn't get this code, ignore this message");
 
-                
-
-                this.Frame.Navigate(typeof(LogIn.LoginPage2));
+                Frame.Navigate(typeof(LoginPage2));
             }
             catch(Exception ex)
             {
@@ -63,6 +67,18 @@ namespace ReChatterBotUWP
 
                 await ErrorDialog.ShowAsync();
             }
+        }
+
+        private void IDKbutton_Checked(object sender, RoutedEventArgs e)
+        {
+            True.Visibility = Visibility.Collapsed;
+            False.Visibility = Visibility.Visible;
+        }
+
+        private void IKbutton_Checked(object sender, RoutedEventArgs e)
+        {
+            True.Visibility = Visibility.Visible;
+            False.Visibility = Visibility.Collapsed;
         }
     }
 }

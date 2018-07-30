@@ -26,6 +26,7 @@ namespace ReChatterBotUWP.LogIn
         {
             this.InitializeComponent();
             AppSettings.Logged = true;
+            LogID.Text = "You were logged in as " + AppSettings.UserID + ".";
         }
 
         private void StartButton(object sender, RoutedEventArgs e)

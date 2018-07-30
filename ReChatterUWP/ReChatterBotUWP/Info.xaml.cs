@@ -25,6 +25,7 @@ namespace ReChatterBotUWP
         public Info()
         {
             this.InitializeComponent();
+            InfoBlock.Text = "Thanks for using this bot!" + Environment.NewLine + "This bot made to send messages to receivers, withots sending name of sender." + Environment.NewLine + " In next versions, you will can use this bot to send images, GIFs, videos and more." + Environment.NewLine + " To get help about this bot, please, contact with developer.";
         }
     }
 }

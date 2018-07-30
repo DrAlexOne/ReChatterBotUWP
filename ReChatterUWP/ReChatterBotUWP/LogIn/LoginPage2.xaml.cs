@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Telegram.Bot;
 
 // Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -25,6 +26,7 @@ namespace ReChatterBotUWP.LogIn
         public LoginPage2()
         {
             this.InitializeComponent();
+            NameByIdText.Text = AppSettings.UserID;
         }
 
         private async void CheckCodeButton(object sender, RoutedEventArgs e)
@@ -44,6 +46,12 @@ namespace ReChatterBotUWP.LogIn
 
                 await ErrorDialog.ShowAsync();
             }
+        }
+
+        private async void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            await AppSettings.client.SendTextMessageAsync(AppSettings.UserID, "Your authorization code: " + AppSettings.CheckCode + ". If you shouldn't get this code, ignore this message");
+
         }
     }
 }

@@ -36,7 +36,14 @@ namespace ReChatterBotUWP
         {
             var messageText = "Comment: " + MessageText.Text;
             var chatId = "547561865";
-            await client.SendTextMessageAsync(chatId, messageText);
+            try
+            {
+                await client.SendTextMessageAsync(chatId, messageText);
+            }
+            catch (Exception error)
+            {
+                SendButton.Content = error;
+            }
         }
     }
 }

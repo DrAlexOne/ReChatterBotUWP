@@ -11,12 +11,15 @@
     <StackPanel Padding="35,35,35,35">
         <TextBlock Text="Authorization page" FontSize="36"/>
         <StackPanel Margin="0,15,0,0">
-            <RadioButton Content="I know my ID"/>
-            <RadioButton Content="I don't know my ID"/>
+            <RadioButton Content="I know my ID" x:Name="IKbutton" Checked="IKbutton_Checked"/>
+            <RadioButton Content="I don't know my ID" x:Name="IDKbutton" Checked="IDKbutton_Checked"/>
         </StackPanel>
         <StackPanel x:Name="True" Margin="0,30,0,0">
             <TextBox x:Name="UserID" PlaceholderText="Enter your ID"/>
             <Button Content="Next" VerticalAlignment="Top" Width="85" Height="35" Margin="0,10,0,0" Click="NextLogin"/>
+        </StackPanel>
+        <StackPanel x:Name="False" Margin="0,30,0,0">
+            <TextBlock Text="Work in progress."/>
         </StackPanel>
     </StackPanel>
 </Page>

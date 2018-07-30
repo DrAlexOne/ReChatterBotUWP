@@ -14,7 +14,7 @@
             <TextBlock HorizontalAlignment="Left" Margin="15,18,0,0" Text="Comment App" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
         </StackPanel>
         <StackPanel Margin="25,30,0,0">
-            <TextBox x:Name="MessageText" PlaceholderText="Your Feedback" HorizontalAlignment="Left" Width="500" Margin="0,15,50,0"/>
+            <TextBox x:Name="MessageText" PlaceholderText="Your Feedback" HorizontalAlignment="Stretch" Margin="0,15,35,0"/>
             <Button x:Name="SendButton" Content="Send!" Width="70" Margin="0,15,0,0" Click="Sendmessage"/>
         </StackPanel>
     </StackPanel>

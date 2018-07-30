@@ -7,14 +7,14 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Grid>
+    <Grid SizeChanged="MainPage_SizeChanged" x:Name="MPage">
         <TextBlock x:Name="AppTitle"
             xmlns:appmodel="using:Windows.ApplicationModel"
             Text="{x:Bind appmodel:Package.Current.DisplayName}"
             Style="{StaticResource CaptionTextBlockStyle}"
             IsHitTestVisible="False"
             Canvas.ZIndex="1"/>
-        <NavigationView x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" Canvas.ZIndex="0" OpenPaneLength="225" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560" IsPaneToggleButtonVisible="False">
+        <NavigationView x:Name="NavView" IsBackButtonVisible="Collapsed" IsSettingsVisible="False" Canvas.ZIndex="0" OpenPaneLength="225" CompactModeThresholdWidth="560" ExpandedModeThresholdWidth="560" IsPaneToggleButtonVisible="False" PaneOpened="NavView_PaneOpened" PaneClosed="NavView_PaneClosed">
             <NavigationView.MenuItems>
                 <NavigationViewItem Icon="Send" Content="Send message" Tag="send" Tapped="SendPage" Margin="0,25,0,0"/>
                 <NavigationViewItem Icon="Mail" Content="Received messages" Tapped="ReceivedPage"/>

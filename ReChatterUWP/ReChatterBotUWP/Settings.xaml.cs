@@ -41,5 +41,17 @@ namespace ReChatterBotUWP
         {
             AppSettings.UserName = TextUserName.Text;
         }
+
+        private void LogInButton(object sender, RoutedEventArgs e)
+        {
+            if (AppSettings.Logged == true)
+            {
+                AppSettings.Logged = false;
+            }
+            if (AppSettings.Logged == false)
+            {
+                Frame.Navigate(typeof(LoginPage1));
+            }
+        }
     }
 }

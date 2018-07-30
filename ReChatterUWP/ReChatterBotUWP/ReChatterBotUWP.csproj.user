@@ -4,9 +4,9 @@
     <AppxPackageIsForStore>False</AppxPackageIsForStore>
     <AppxShowAllApps>False</AppxShowAllApps>
     <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
-    <PackageOptionalProjectsInIdeBuilds>True</PackageOptionalProjectsInIdeBuilds>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
     <BadgeLogoSource>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AssetsExamples\123 – 1.png</BadgeLogoSource>
-    <AppIconSource>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AssetsExamples\ExampleLogo.png</AppIconSource>
+    <AppIconSource>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AssetsExamples\ExampleLogoTask.png</AppIconSource>
     <Source>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AssetsExamples\ExampleLogo.png</Source>
     <SmallTileSource>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AssetsExamples\ExampleLogo.png</SmallTileSource>
     <MediumTileSource>D:\Alex\Visual\ReChatterUWP\ReChatterBotUWP\AssetsExamples\ExampleLogo.png</MediumTileSource>
@@ -18,5 +18,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>true</UseEmulator>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
+    <UseEmulator>false</UseEmulator>
   </PropertyGroup>
 </Project>

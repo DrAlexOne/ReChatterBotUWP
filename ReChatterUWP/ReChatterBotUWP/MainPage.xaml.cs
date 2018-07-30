@@ -84,5 +84,26 @@ namespace ReChatterBotUWP
                 }
             }
         }
+
+        private void MainPage_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (MPage.Width > 560)
+            {
+                AppTitle.Visibility = Visibility.Visible;
+            }
+            if (MPage.Width < 560)
+            {
+                Console.WriteLine("1");
+            }
+        }
+        private void NavView_PaneOpened(NavigationView sender, object args)
+        {
+            AppTitle.Visibility = Visibility.Visible;
+        }
+
+        private void NavView_PaneClosed(NavigationView sender, object args)
+        {
+            AppTitle.Visibility = Visibility.Collapsed;
+        }
     }
 }
