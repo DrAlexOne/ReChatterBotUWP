@@ -12,7 +12,7 @@ namespace ReChatterBotUWP
 
         public static string theme { get; set; } = "light";
 
-        public static string Key { get; set; } = "573711040:AAFwkfRyeyO2BEaSnhNQUCDwTcAoQtdCTtc";
+        public static string Key { get; set; } = "||| TOKEN |||";
 
         public static string UserID { get; set; } = "0";
 
