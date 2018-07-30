@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -55,48 +55,3 @@ namespace ReChatterBotUWP
         }
     }
 }
-//--------------------------------------
-// Content, to make this file longer
-// becouse GitHub cant detect that this project is C# project
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                    
-//                                        
-//
-//                    
-//
-//
-// End of content                     
-//---------------------------------------------------
-
